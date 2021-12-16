@@ -1,0 +1,120 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+html {
+  background: rgba(59, 47, 59, 1);
+  display: table;
+  margin: auto;
+}
+
+body {
+  font-size: 14px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.pageContainer {
+  width: 375px;
+  height: 812px;
+  background: rgba(59, 47, 59, 1);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  border: 1px solid;
+  border-color: turquoise;
+}
+
+
+
+.appTitle {
+  width: 200px;
+  color: rgba(255, 255, 255, 1);
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  opacity: 1;
+  text-align: left;
+}
+
+.odjelcontainertitle {
+  width: 113px;
+  color: rgba(59, 47, 59, 1);
+  position: relative;
+  top: 10px;
+  left: 131px;
+  font-family: Poppins;
+  font-weight: Bold Italic;
+  font-size: 18px;
+  opacity: 0.800000011920929;
+  text-align: center;
+}
+
+.btnExit {
+  position: absolute;
+  width: 52px;
+  height: 28px;
+  top: 20px;
+  right: 10px;
+  padding-left: 5px;
+  background: rgba(236, 199, 191, 1);
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
+  border-bottom-left-radius: 11px;
+  border-bottom-right-radius: 11px;
+  color: rgba(255, 255, 255, 1);
+  font-family: Poppins;
+  font-weight: SemiBold Italic;
+  font-size: 14px;
+  text-align: center;
+  border: transparent;
+}
+
+.btnExit:hover {
+  background: transparent;
+  border: 1px solid;
+  border-color: rgba(140, 202, 197, 1);
+  color: rgba(140, 202, 197, 1);
+}
+
+.cardsContainer {
+  width: 375px;
+  height: 750px;
+  background: rgba(254, 234, 230, 1);
+  opacity: 1;
+  position: absolute;
+  top: 67px;
+  left: 0px;
+  border-top-left-radius: 42px;
+  border-top-right-radius: 42px;
+}
+
+.listGridContainer {
+  top: 42px;
+  left: 0px;
+  overflow-y: scroll;
+  position: absolute;
+  width: 375px;
+  height: 700px;
+}
+
+.listItemContainer {
+  list-style: none;
+  display: inline-block;
+}
+
+.listagrid {
+  columns: 2;
+  position: absolute;
+  width: 350px;
+  
+}

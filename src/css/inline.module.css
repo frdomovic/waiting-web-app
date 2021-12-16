@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+* {
+    box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+}
+
+html {
+  display: table;
+  margin: auto;
+}
+body {
+background: rgba(59,47,59,1);
+font-size: 14px;
+display: table-cell;
+vertical-align: middle;
+}
+.v17_122 {
+    width: 375px;
+    height: 812px;
+    background: rgba(59,47,59,1);
+    opacity: 1;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid;
+    border-color: blue;
+  }
+  .v17_124 {
+    width: 120px;
+    height: 124px;
+    background: rgba(236,199,191,1);
+    opacity: 1;
+    position: absolute;
+    top: 6px;
+    left: 204px;
+    border-radius: 50%;
+  }
+  .v17_126 {
+    width: 145px;
+    height: 145px;
+    background: rgba(140,202,197,1);
+    opacity: 1;
+    position: absolute;
+    top: 89px;
+    left: 49px;
+    border-radius: 50%;
+  }
+  .v17_125 {
+    width: 211px;
+    height: 211px;
+    background: rgba(249,174,135,1);
+    opacity: 1;
+    position: absolute;
+    top: 6px;
+    left: 82px;
+    border-radius: 50%;
+  }
+  .v19_136 {
+    width: 308px;
+    height: 309px;
+    background: rgba(236,199,191,1);
+    opacity: 1;
+    position: absolute;
+    top: 262px;
+    left: 32px;
+    border-top-left-radius: 31px;
+    border-top-right-radius: 31px;
+    border-bottom-left-radius: 31px;
+    border-bottom-right-radius: 31px;
+    overflow: hidden;
+  }
+  .v20_137 {
+    width: 132px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 282px;
+    left: 121px;
+    font-family: Poppins;
+    font-weight: Bold;
+    font-size: 24px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v20_138 {
+    width: 230px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 318px;
+    left: 77px;
+    font-family: Poppins;
+    font-weight: ExtraBold;
+    font-size: 85px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v20_139 {
+    width: 56px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 437px;
+    left: 58px;
+    font-family: Poppins;
+    font-weight: Medium;
+    font-size: 14px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v20_140 {
+    width: 105px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 445px;
+    left: 58px;
+    font-family: Poppins;
+    font-weight: Bold;
+    font-size: 48px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v20_141 {
+    width: 308px;
+    height: 109px;
+    background: rgba(236,199,191,1);
+    opacity: 1;
+    position: absolute;
+    top: 581px;
+    left: 32px;
+    border-top-left-radius: 36px;
+    border-top-right-radius: 36px;
+    border-bottom-left-radius: 36px;
+    border-bottom-right-radius: 36px;
+    overflow: hidden;
+  }
+  .v20_142 {
+    width: 231px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 597px;
+    left: 71px;
+    font-family: Poppins;
+    font-weight: Bold;
+    font-size: 13px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v20_143 {
+    width: 167px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 612px;
+    left: 110px;
+    font-family: Poppins;
+    font-weight: Bold;
+    font-size: 48px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v23_2 {
+    width: 120px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 437px;
+    left: 198px;
+    font-family: Poppins;
+    font-weight: Medium;
+    font-size: 14px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v23_3 {
+    width: 68px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 447px;
+    left: 236px;
+    font-family: Poppins;
+    font-weight: Bold;
+    font-size: 48px;
+    opacity: 1;
+    text-align: left;
+  }
+  .name {
+    color: #fff;
+  }
+  .name {
+    color: #fff;
+  }

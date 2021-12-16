@@ -1,0 +1,116 @@
+.popup {
+    width: 373px;
+    height: 790px;
+    background: rgba(59,47,59,1);
+    opacity: 1;
+    position: absolute;
+    top: 5px;
+    z-index: 1;
+    border: 1px solid rgba(140,202,197,1);
+    border-top-left-radius: 31px;
+    border-top-right-radius: 31px;
+    border-bottom-left-radius: 31px;
+    border-bottom-right-radius: 31px;
+    overflow: hidden;
+    opacity: 0.95;
+  }
+  .exitbtn {
+    width: 30px;
+    height: 30px;
+    background: rgba(236,199,191,1);
+    color: white;
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    font-size: 20px;
+    font: bold;
+    z-index: 2;
+    border-color: transparent;
+    border-radius: 50%;
+  }
+  .exitbtn:hover{
+    background: transparent;
+    z-index: 2;
+    border-color: rgba(140,202,197,1);
+    border: 1px solid;
+  }
+  .exittxt{
+      position: absolute;
+      right: 7px;
+      bottom: -2px;
+  }
+.desctxt{
+    position:absolute;
+    opacity: 1;
+    width: 150;
+    height: auto;
+    font-weight: SemiBold Italic;
+    font-size: 20px;
+    top: 80px;
+    left: 20px;
+    z-index: 2;
+    color: tomato;
+}
+
+.btnLogindiv{
+    top: 215px;
+    left: 112px;
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+  }
+  .loginbtn{
+    width: 129px;
+    height: 33px;
+    background: rgba(236,199,191,1);
+    color: rgba(255,255,255,1);
+    font-family: Poppins;
+    font-weight: SemiBold Italic;
+    font-size: 14px;
+    border-color: transparent;
+    z-index: 2;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+  }
+  .loginbtn:hover{
+    color:rgba(140,202,197,1);
+    background-color: transparent;
+    z-index: 2;
+    border-color: rgba(140,202,197,1);
+  }
+  .underline{
+    position:absolute;
+    width: 295px;
+    height: 1px;
+    background: rgba(236,199,191,0.5);
+    top: 195px;
+    left: 32px;
+    z-index: 2;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    overflow: hidden;
+  }
+  .titleKorisnickoime {
+    width: 280px;
+    background: transparent;
+    color: rgba(145,145,145,1);
+    position: absolute;
+    top: 160px;
+    left: 37px;
+    font-family: Poppins;
+    font-weight: SemiBold Italic;
+    font-size: 14px;
+    opacity: 1;
+    text-align: left;
+    padding-left: 10px;
+    border: hidden;
+    z-index: 2;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+  }

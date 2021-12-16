@@ -1,0 +1,34 @@
+.cardItem {
+    z-index: 1;
+    width: 90px;
+    height: 65px;
+    position: relative;
+    overflow: hidden;
+    background: rgba(236,199,191,1);
+    box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    margin-bottom: 10px;
+  }
+  .odjelTitle {
+    color: rgba(59,47,59,1);
+    position: absolute;
+    top: 8px;
+    left: 15px;
+    font-family: Poppins;
+    font-weight: bold;
+    font-size: 14px;
+    opacity: 1;
+    text-align: left;
+  }
+  .odjelTime {
+    color: rgba(59,47,59,1);
+    position: absolute;
+    top: 32px;
+    left: 16px;
+    font-family: Poppins;
+    font-weight: Medium Italic;
+    font-size: 13px;
+    opacity: 1;
+    text-align: center;
+  }
+  

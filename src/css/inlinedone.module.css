@@ -1,0 +1,210 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+* {
+    box-sizing: border-box;
+  }
+  html, body {
+    height: 100%;
+  }
+  
+  html {
+    display: table;
+    margin: auto;
+  }
+  body {
+  background: rgba(59,47,59,1);
+  font-size: 14px;
+  display: table-cell;
+  vertical-align: middle;
+  }
+  .v20_156 {
+    border: 1px solid;
+    border-color: cadetblue;
+    width: 375px;
+    height: 812px;
+    background: rgba(59,47,59,1);
+    opacity: 1;
+    position: relative;
+    overflow: hidden;
+  }
+  .v20_157 {
+    width: 120px;
+    height: 124px;
+    background: rgba(236,199,191,1);
+    opacity: 1;
+    position: absolute;
+    top: 6px;
+    left: 204px;
+    border-radius: 50%;
+  }
+  .v20_158 {
+    width: 145px;
+    height: 145px;
+    background: rgba(140,202,197,1);
+    opacity: 1;
+    position: absolute;
+    top: 89px;
+    left: 49px;
+    border-radius: 50%;
+  }
+  .v20_159 {
+    width: 211px;
+    height: 211px;
+    background: rgba(249,174,135,1);
+    opacity: 1;
+    position: absolute;
+    top: 6px;
+    left: 82px;
+    border-radius: 50%;
+  }
+  .v20_197 {
+    width: 308px;
+    height: 309px;
+    background: rgba(236,199,191,1);
+    opacity: 1;
+    position: absolute;
+    top: 256px;
+    left: 33px;
+    border-top-left-radius: 31px;
+    border-top-right-radius: 31px;
+    border-bottom-left-radius: 31px;
+    border-bottom-right-radius: 31px;
+    overflow: hidden;
+  }
+  .v20_198 {
+    width: 132px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 276px;
+    left: 122px;
+    font-family: Poppins;
+    font-weight: Bold;
+    font-size: 24px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v20_199 {
+    width: 230px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 312px;
+    left: 78px;
+    font-family: Poppins;
+    font-weight: ExtraBold;
+    font-size: 85px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v20_200 {
+    width: 56px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 431px;
+    left: 78px;
+    font-family: Poppins;
+    font-weight: Medium;
+    font-size: 14px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v20_201 {
+    width: 105px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 441px;
+    left: 78px;
+    font-family: Poppins;
+    font-weight: Bold;
+    font-size: 48px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v20_202 {
+    width: 308px;
+    height: 109px;
+    background: rgba(236,199,191,1);
+    opacity: 1;
+    position: absolute;
+    top: 575px;
+    left: 33px;
+    border-top-left-radius: 36px;
+    border-top-right-radius: 36px;
+    border-bottom-left-radius: 36px;
+    border-bottom-right-radius: 36px;
+    overflow: hidden;
+  }
+  .v20_203 {
+    width: 224px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 591px;
+    left: 59px;
+    font-family: Poppins;
+    font-weight: Bold;
+    font-size: 13px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v20_204 {
+    width: 167px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 603px;
+    left: 78px;
+    font-family: Poppins;
+    font-weight: Bold;
+    font-size: 48px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v20_188 {
+    width: 329px;
+    height: 193px;
+    background: rgba(249,174,135,1);
+    opacity: 1;
+    position: absolute;
+    top: 256px;
+    left: 23px;
+    border-top-left-radius: 31px;
+    border-top-right-radius: 31px;
+    border-bottom-left-radius: 31px;
+    border-bottom-right-radius: 31px;
+    overflow: hidden;
+  }
+  .v20_189 {
+    width: 241px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 293px;
+    left: 63px;
+    font-family: Poppins;
+    font-weight: Bold;
+    font-size: 36px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v20_191 {
+    width: 89px;
+    height: 27px;
+    background: rgba(59,47,59,1);
+    opacity: 1;
+    position: absolute;
+    top: 374px;
+    left: 139px;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    overflow: hidden;
+  }
+  .v20_190 {
+    width: 66px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 370px;
+    left: 151px;
+    font-family: Poppins;
+    font-weight: Bold;
+    font-size: 24px;
+    opacity: 1;
+    text-align: left;
+  }
