@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { Form, Button, Alert } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { setToken, setUser, setUserSession } from "../Utils/Common";
+import { setToken,getToken, setUser, setUserSession } from "../Utils/Common";
 import * as ReactBootStrap from 'react-bootstrap';
-
 import classes from "../css/workerLP.module.css";
 import showlogo from "../media/showlogo.png";
 import LoginPop from "../component-popup/LoginPop";
@@ -27,7 +26,7 @@ export default function Login(props) {
     setError(null);
     setLoading(true);
 
-    if(password === ""){
+    if(password === "" || password === undefined || password === null){
       setAccount(true);
       setPassword("passHash");
     }
@@ -40,30 +39,35 @@ export default function Login(props) {
         password: password 
       }),
     };
-
+    let stats;
     await fetch(
       "https://stormy-reef-35557.herokuapp.com/prijava/djelatnik",
       requestOptions
     )
       .then((res) => {
-        console.log(res.status);
+        stats = res.status
         if (res.status === 200) {
           setLoading(false);
-          if(account){
-              setUser(username);
-              setToken(res.text());
-              props.history.push("/Signup");
-              return;
-          }else{
-            setUserSession(res.text(), username);
-            props.history.push("/WorkerStartPage");
-            console.log("ok");
-          }
+          
         } else if (res.status === 401) {
           setLoading(false);
           setError("Failed to log in ");
           console.log("failed auth");
         }
+        return res.text();
+      })
+      .then((tokenstr) =>{
+          if(stats ===200){
+            setLoading(false);
+            if(account){
+              setUserSession(tokenstr, username);
+              props.history.push("/Signup");
+            }else{
+                setUserSession(tokenstr, username);
+                props.history.push("/WorkerStartPage");
+                console.log("ok");
+            }
+          }    
       })
       .catch((err) => {
         setLoading(false);

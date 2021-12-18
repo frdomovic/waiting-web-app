@@ -1,6 +1,8 @@
-import React from "react";
+import React,{ useState} from "react";
 import classes from "../css/inline.module.css";
+
 export default function InLine() {
+  const [notificationstatus, setNotificationstatus] = useState(true); 
   return (
     <body>
       <div className={classes.v17_122}>

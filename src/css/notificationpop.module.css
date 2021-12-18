@@ -1,0 +1,317 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");  
+  .pageContainer {
+    width: 375px;
+    height: 812px;
+    background: rgba(59,47,59,1);
+    opacity: 1;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid;
+    border-color: blue;
+
+  }
+  .decorationC1{
+    width: 120px;
+    height: 124px;
+    background: rgba(236,199,191,1);
+    opacity: 1;
+    position: absolute;
+    top: 6px;
+    left: 204px;
+    border-radius: 50%;
+  }
+  .decorationC2 {
+    width: 145px;
+    height: 145px;
+    background: rgba(140,202,197,1);
+    opacity: 1;
+    position: absolute;
+    top: 89px;
+    left: 49px;
+    border-radius: 50%;
+  }
+  .decorationC3 {
+    width: 211px;
+    height: 211px;
+    background: rgba(249,174,135,1);
+    opacity: 1;
+    position: absolute;
+    top: 6px;
+    left: 82px;
+    border-radius: 50%;
+  }
+  .formContainer {
+    width: 309px;
+    height: 539px;
+    background: rgba(249,174,135,1);
+    opacity: 1;
+    position: absolute;
+    top: 155px;
+    left: 30px;
+    border-top-left-radius: 38px;
+    border-top-right-radius: 38px;
+    border-bottom-left-radius: 38px;
+    border-bottom-right-radius: 38px;
+    overflow: hidden;
+  }
+  .formtitle {
+    width: 230px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 181px;
+    left: 63px;
+    font-family: Poppins;
+    font-weight: Bold;
+    font-size: 15px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v20_170 {
+    width: 14px;
+    height: 14px;
+    background: rgba(59,47,59,1);
+    opacity: 1;
+    position: absolute;
+    top: 240px;
+    left: 51px;
+    border-radius: 50%;
+  }
+  .v20_178 {
+    width: 14px;
+    height: 14px;
+    background: rgba(59,47,59,1);
+    opacity: 1;
+    position: absolute;
+    top: 348px;
+    left: 51px;
+    border-radius: 50%;
+  }
+  .v20_171 {
+    width: 14px;
+    height: 14px;
+    background: rgba(59,47,59,1);
+    opacity: 1;
+    position: absolute;
+    top: 267px;
+    left: 51px;
+    border-radius: 50%;
+  }
+  .v20_172 {
+    width: 14px;
+    height: 14px;
+    background: rgba(59,47,59,1);
+    opacity: 1;
+    position: absolute;
+    top: 294px;
+    left: 51px;
+    border-radius: 50%;
+  }
+  .v20_173 {
+    width: 14px;
+    height: 14px;
+    background: rgba(59,47,59,1);
+    opacity: 1;
+    position: absolute;
+    top: 321px;
+    left: 51px;
+    border-radius: 50%;
+  }
+  .v20_174 {
+    width: 112px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 237px;
+    left: 74px;
+    font-family: Poppins;
+    font-weight: Bold;
+    font-size: 15px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v20_175 {
+    width: 120px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 264px;
+    left: 74px;
+    font-family: Poppins;
+    font-weight: Bold;
+    font-size: 15px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v20_176 {
+    width: 117px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 291px;
+    left: 74px;
+    font-family: Poppins;
+    font-weight: Bold;
+    font-size: 15px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v20_177 {
+    width: 138px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 317px;
+    left: 74px;
+    font-family: Poppins;
+    font-weight: Bold;
+    font-size: 15px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v20_179 {
+    width: 116px;
+    height: 15px;
+    background: rgba(249,174,135,1);
+    opacity: 1;
+    position: absolute;
+    top: 348px;
+    left: 76px;
+    border: 1px solid rgba(0,0,0,0.10000000149011612);
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    overflow: hidden;
+  }
+  .v20_181 {
+    width: 91px;
+    color: rgba(0,0,0,1);
+    position: absolute;
+    top: 351px;
+    left: 80px;
+    font-family: Poppins;
+    font-weight: Bold;
+    font-size: 7px;
+    opacity: 0.6000000238418579;
+    text-align: left;
+  }
+  .name {
+    color: #fff;
+  }
+  .v20_183 {
+    width: 10px;
+    height: 10px;
+    background: rgba(140,202,197,1);
+    opacity: 1;
+    position: absolute;
+    top: 242px;
+    left: 53px;
+    border-radius: 50%;
+  }
+ 
+  .v20_185 {
+    width: 67px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 391px;
+    left: 84px;
+    font-family: Poppins;
+    font-weight: Bold;
+    font-size: 14px;
+    opacity: 1;
+    text-align: left;
+  }
+  .v20_192 {
+    width: 274px;
+    height: 165px;
+  
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 445px;
+    left: 58px;
+    overflow: hidden;
+  }
+  .v20_193 {
+    width: 57px;
+    height: 57px;
+    opacity: 1;
+    position: absolute;
+    top: 237px;
+    left: 245px;
+    border-radius: 50%;
+  }
+  .name {
+    color: #fff;
+  }
+
+
+  .form{
+    position: absolute;
+    top: 234px;
+    left: 68px;
+  }
+
+  .r1check,.r2check,.r3check{
+      width: 14px;
+      margin-top: 10px;
+  }
+  .r1text, .r2text, .r3text, .minutetext{
+    width: 150px;
+    position: absolute;
+    left: 25px;
+    font-family: Poppins;
+    font-weight: Bold;
+    font-size: 16px;
+  }
+  .r1text{
+    top: 10px;
+  }
+  .r2text{
+    top: 40px;
+  }
+  .r3text{
+    top: 70px;
+  }
+  .btnLogindiv{
+    top: 150px;
+    left: 45px;
+    width: 100%;
+    position: absolute;
+  }
+  .loginbtn{
+    margin: auto;
+    width: 129px;
+    height: 33px;
+    background: rgba(59,47,59,1);
+    padding: 3px 44px;
+    color: rgba(255,255,255,1);
+    font-family: Poppins;
+    font-weight: SemiBold Italic;
+    font-size: 14px;
+    text-align: center;
+    border-color: transparent;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+  }
+  .loginbtn:hover{
+    background: rgba(59,47,59,1);
+    border-color: rgba(140,202,197,1);
+  }
+  .minutetext{
+    top: 100px;
+    width: 160px;
+    border-color: transparent;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+    background: rgba(0,0,0,0.10000000149011612);
+  }
+  .minutetext:focus{
+    background: rgba(0,0,0,0.10000000149011612);
+  }
+  .c1check{
+    width: 14px;
+    margin-top: 15px;
+  }

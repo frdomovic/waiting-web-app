@@ -83,8 +83,51 @@ body {
   border-top-left-radius: 42px;
   border-top-right-radius: 42px;
 }
-.shortdesc{
+.underline{
+  position:absolute;
+  width: 295px;
+  height: 1px;
+  background: rgba(59, 47, 59, 1);
+  top: 190px;
+  left: 32px;
+  opacity: 0.9;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  overflow: hidden;
+}
+
+.odjelIcon {
+  width: 160px;
+  height: 160px;
+  opacity: 1;
+  background: rgba(236,199,191,1);
   position: absolute;
-  top: 10px;
-  left: 20px;
+  top: 20px;
+  left: 107px;
+  border-radius: 50%;
+}
+.odjelTitle {
+  width: 250px;
+  color: rgba(59,47,59,1);
+  position: absolute;
+  top: 200px;
+  left: 40px;
+  font-family: Poppins;
+  font-weight: SemiBold Italic;
+  font-size: 20px;
+  opacity: 1;
+}
+.odjelDesc {
+  width: 295px;
+  height: 500px;
+  color: rgba(59,47,59,1);
+  position: absolute;
+  top: 240px;
+  left: 32px;
+  font-family: Poppins;
+  font-weight: Medium Italic;
+  font-size: 16px;
+  opacity: 1;
 }

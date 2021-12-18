@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Form, Button, Alert } from "react-bootstrap";
 import { Link, useHistory} from "react-router-dom";
 import * as ReactBootStrap from 'react-bootstrap';
-import {getToken, getUser, removeUserSession} from "../Utils/Common";
+import {getPWstatus, getToken, getUser, removeUserSession} from "../Utils/Common";
 
 import classes from "../css/signup.module.css";
 import showlogo from "../media/showlogo.png";
@@ -15,6 +15,11 @@ export default function Signup(props) {
   const [loading, setLoading] = useState(false);
   const [show, setShow] = useState(false);
   const history = useHistory();
+  
+  console.log(getToken());
+  if(getPWstatus()){
+    setError=(getPWstatus());
+  }
   const useEffect = () => {
     return () => {
       if(history.action === "POP"){
@@ -47,10 +52,11 @@ export default function Signup(props) {
           if (res.status === 200) {
             setLoading(false);
             removeUserSession();
-            props.history.push("/Login");
             console.log("ok");
+            props.history.push("/Login"); 
           } else if (res.status === 401) {
             setLoading(false);
+            removeUserSession();
             setError("Failed to signup");
             console.log("failed signup");
           }

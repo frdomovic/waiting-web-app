@@ -3,7 +3,12 @@ export const getUser = () =>{
     if(userStr) return JSON.parse(userStr);
     else return null;
 }
-
+export const setStatus = (status) => {
+    sessionStorage.setItem("status",status);
+}
+export const getPWstatus = () =>{
+    return sessionStorage.getItem("status") || null;
+}
 export const getToken = () => {
     return sessionStorage.getItem("token") || null;
 }
