@@ -3,6 +3,7 @@ import classes from "../css/itemcard.module.css";
 import { Link, useHistory } from "react-router-dom";
 
 export default function ItemCard(props) {
+  const [loading, setLoading] = useState(false);
   const history = useHistory();
   const handleRequest = () => {
     history.push({
@@ -13,11 +14,44 @@ export default function ItemCard(props) {
         desc: props.odjeldesc,
         ldesc: props.odjellong,
         ico: props.odjelpng,
+        clientId: props.clientId
       },
     });
   };
-  const handleSubmit = () => {
-    history.push("/notificationpop");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    let data;
+    const requestOptions = {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        klijentId: props.clientId,
+        odjelId: props.id,
+      }),
+    };
+
+    await fetch("/klijent/odaberiOdjel", requestOptions)
+      .then((res) => {
+        return res.text();
+      })
+      .then((res) => {
+        data = JSON.parse(res);
+      })
+      .catch((err) => {
+        console.log("Critical server error", err);
+      });
+    if (data) {
+      history.push({
+        pathname: "/notificationpop",
+        state: {
+          redniBroj: data.redniBroj,
+          salter: data.salter,
+          vrijeme: data.vrijemeCekanja / 60,
+          clientId: props.clientId
+        },
+      });
+    }
   };
 
   if (props.odjeltitle === "") {
@@ -40,11 +74,10 @@ export default function ItemCard(props) {
           <span className={classes.odjelDesc} onClick={handleRequest}>
             {props.odjeldesc}
           </span>
-          
-            <button className={classes.btnUred} onClick={handleSubmit}>
-              STANI U RED
-            </button>
-          
+
+          <button className={classes.btnUred} onClick={handleSubmit}>
+            STANI U RED
+          </button>
         </div>
       </div>
     );

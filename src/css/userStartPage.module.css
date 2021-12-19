@@ -8,7 +8,7 @@ html, body {
 }
 
 html {
-  background: rgba(59, 47, 59, 1);
+  background:rgba(59, 47, 59, 1);
   display: table;
   margin: auto;
 }
@@ -31,8 +31,6 @@ body {
   border: 1px solid;
   border-color: turquoise;
 }
-
-
 
 .appTitle {
   width: 200px;

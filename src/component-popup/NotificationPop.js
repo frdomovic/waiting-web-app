@@ -1,34 +1,38 @@
 import React,{useState} from "react";
 import classes from "../css/notificationpop.module.css";
 import { Form, Button, Alert, FormGroup } from "react-bootstrap";
-import { useHistory} from "react-router-dom";
+import { useHistory, useLocation} from "react-router-dom";
 
 
-export default function NotificationPop() {
+export default function NotificationPop(props) {
   const [loading, setLoading] = useState(false);
   const history = useHistory();
   const [minvalue, setMinvalue] = useState("");
+  const location = useLocation();
   const [activeradio, setActiveradio] = useState(true);
+
   let current = "";
-  const handleNotification = async(e) => {
-    e.preventDefault();
-    history.push("/InLine")
+  const handleNotification = async() => {
+      history.push({
+        pathname: "/InLine",
+        state: {
+          redniBroj: location.state.redniBroj,
+          salter: location.state.salter,
+          vrijeme: location.state.redniBroj,
+          clientId: location.state.clientId
+        }
+      });
+    
   };
 
 
   const handleChange =(e) => {
       if(activeradio){
-        console.log(e);
         current=e;
-        console.log("CURENT:",current);
         setMinvalue(e);
-        if(minvalue){
-          //console.log(minvalue);
-        }
       }else if(e.id === "time" && activeradio){
         setMinvalue(e.value);
-        console.log("CURENT:",current);
-        console.log(e.value);
+        current = e.value;
       }
   };
 

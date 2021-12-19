@@ -1,14 +1,24 @@
 import React, {useEffect} from "react";
 import classes from "../css/odjeldesc.module.css";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation,useHistory  } from "react-router-dom";
 
 export default function OdjelDesc(props) {
   const location = useLocation();
+  const history = useHistory();
+
+  const handleexit = () =>{
+    history.push({pathname: "/UserStartPage",
+      state: {
+        id: props.clientId
+      }
+    });
+  };
+
   return (
     <div className={classes.pageContainer}>
       <span className={classes.appTitle}>RED U RED </span>
       <Link to="/UserStartPage">
-        <button className={classes.btnExit}>NAZAD</button>
+        <button className={classes.btnExit} onClick={handleexit}>NAZAD</button>
       </Link>
       
 

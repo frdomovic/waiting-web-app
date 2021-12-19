@@ -15,7 +15,18 @@ export default function Signup(props) {
   const [loading, setLoading] = useState(false);
   const [show, setShow] = useState(false);
   const history = useHistory();
-  
+  const logout = async() => {
+    const requestOptions = {
+      method: "POST",
+      headers: { "Authorization": `Bearer ${getToken()}`},
+    };
+
+    await fetch(
+      "/djelatnik/odjava",
+      requestOptions
+    )
+  }
+
   console.log(getToken());
   if(getPWstatus()){
     setError=(getPWstatus());
@@ -39,19 +50,18 @@ export default function Signup(props) {
       const requestOptions = {
         method: "POST",
         headers: { "Authorization": `Bearer ${getToken()}`},
-        body: JSON.stringify({
-          password: password,
-        }),
+        body: password,
       };
   
       await fetch(
-        "https://stormy-reef-35557.herokuapp.com/djelatnik/postaviLozinku",
+        "/djelatnik/postaviLozinku",
         requestOptions
       )
         .then((res) => {
           if (res.status === 200) {
             setLoading(false);
             removeUserSession();
+            logout();
             console.log("ok");
             props.history.push("/Login"); 
           } else if (res.status === 401) {
@@ -145,7 +155,7 @@ export default function Signup(props) {
             className={classes.loginbtn}
             type="submit"
           >
-            {loading ? "Loading..." : "POSTAVI"}
+            {loading ? "Loading... " : "POSTAVI"}
           </Button>
           {loading && <ReactBootStrap.Spinner animation="border" variant="info" className={classes.spinner}/>}
         </div>

@@ -3,6 +3,13 @@ export const getUser = () =>{
     if(userStr) return JSON.parse(userStr);
     else return null;
 }
+export const setID = (id) =>{
+    sessionStorage.setItem("id",id);
+}
+export const getID = () =>{
+    return sessionStorage.getItem("id") || null;
+}
+
 export const setStatus = (status) => {
     sessionStorage.setItem("status",status);
 }
@@ -34,4 +41,6 @@ export const removeUser = () => {
 export const removeUserSession = () => {
     sessionStorage.removeItem("token");
     sessionStorage.removeItem("user");
+    sessionStorage.removeItem("status");
+    sessionStorage.removeItem("id");
 }

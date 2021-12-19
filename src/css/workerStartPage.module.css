@@ -225,10 +225,10 @@
     color: rgba(0,0,0,1);
     position: absolute;
     top: 212px;
-    left: 64px;
+    left: 40px;
     font-family: Poppins;
-    font-weight: Bold Italic;
-    font-size: 24px;
+    font-weight: Bold italic;
+    font-size: 28px;
     opacity: 1;
     text-align: left;
     white-space: pre-wrap;
@@ -238,10 +238,10 @@
     color: rgba(0,0,0,1);
     position: absolute;
     top: 212px;
-    left: 255px;
+    left: 250px;
     font-family: Poppins;
     font-weight: Bold Italic;
-    font-size: 24px;
+    font-size: 28px;
     opacity: 1;
     text-align: left;
   }
@@ -290,4 +290,9 @@
     columns: 3;
     position: absolute;
     width: 348px;
+  }
+  .listItemContainer2 {
+    list-style: none;
+    display: inline-block;
+    
   }

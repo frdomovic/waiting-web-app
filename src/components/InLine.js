@@ -1,8 +1,33 @@
-import React,{ useState} from "react";
+import React, { useState, useEffect } from "react";
 import classes from "../css/inline.module.css";
+import { useLocation } from "react-router-dom";
 
 export default function InLine() {
-  const [notificationstatus, setNotificationstatus] = useState(true); 
+  const [notificationstatus, setNotificationstatus] = useState(true);
+  const [ntime, setTime] = useState("0");
+  const location = useLocation();
+  const MINUTE_MS = 60000;
+  let vrijeme;
+  useEffect(() => {
+    const interval = setInterval(() =>{
+      const requestOptions = {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: location.state.clientId,
+      };
+      fetch("/klijent/sinkronizirajVrijeme",requestOptions)
+      .then((res)=>{
+        return res.text();
+      }).then((res)=>{
+        setTime(res/60);
+      }).catch((err) =>{
+        console.log("Critical server error",err);
+      })
+
+    }, MINUTE_MS);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <body>
       <div className={classes.v17_122}>
@@ -11,16 +36,14 @@ export default function InLine() {
         <div className={classes.v17_125}></div>
         <div className={classes.v19_136}></div>
         <span className={classes.v20_137}>VAŠ BROJ : </span>
-        <span className={classes.v20_138}>A142</span>
+        <span className={classes.v20_138}>  A{location.state.clientId}</span>
         <span className={classes.v20_139}>ŠALTER:</span>
-        <span className={classes.v20_140}>S3</span>
+        <span className={classes.v20_140}>{location.state.salter}</span>
         <div className={classes.v20_141}></div>
-        <span className={classes.v20_142}>
-          Procjena do dolska na red:
-        </span>
-        <span className={classes.v20_143}>32 MIN</span>
+        <span className={classes.v20_142}>Procjena do dolska na red:</span>
+        <span className={classes.v20_143}>{ntime} MIN</span>
         <span className={classes.v23_2}>POZICIJA U REDU:</span>
-        <span className={classes.v23_3}>6</span>
+        <span className={classes.v23_3}>{location.state.redniBroj}</span>
         <div className={classes.name}></div>
         <div className={classes.name}></div>
       </div>

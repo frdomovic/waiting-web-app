@@ -15,7 +15,6 @@ export default function Login(props) {
   const [show, setShow] = useState(false);
   const [account, setAccount] = useState(false);
   const [recovery, setRecovery] = useState(false);
-
   const recoverypopup = () => {
     setRecovery(true);
   }
@@ -25,8 +24,7 @@ export default function Login(props) {
     setAccount(false);
     setError(null);
     setLoading(true);
-
-    if(password === "" || password === undefined || password === null){
+    if(!password){
       setAccount(true);
       setPassword("passHash");
     }
@@ -41,17 +39,16 @@ export default function Login(props) {
     };
     let stats;
     await fetch(
-      "https://stormy-reef-35557.herokuapp.com/prijava/djelatnik",
+      "/prijava/djelatnik",
       requestOptions
     )
       .then((res) => {
         stats = res.status
         if (res.status === 200) {
           setLoading(false);
-          
         } else if (res.status === 401) {
           setLoading(false);
-          setError("Failed to log in ");
+          setError("Failed to log in! ");
           console.log("failed auth");
         }
         return res.text();
