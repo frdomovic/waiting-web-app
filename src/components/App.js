@@ -24,7 +24,7 @@ function App() {
           <PrivateRoute path="/WorkerStartPage" component={WorkerStartPage} />
           <Route path="/UserStartPage" component={UserStartPage} />
           <Route path="/InLine" component={InLine} />
-          <Route path="/InLineDone" component={InLineDone} />
+          <Route path="/inlinex" component={InLineDone} />
           <Route path="/Signup" component={Signup} />
           <Route path="/odjeldesc" component={Odjeldesc} />
           <Route path="/notificationpop" component={NotificationPop} />

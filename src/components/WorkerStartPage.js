@@ -7,14 +7,20 @@ import { removeUserSession, getUser, getToken } from "../Utils/Common";
 function WorkerStartPage(props) {
   const user = getUser().substring(0,getUser().lastIndexOf("@"));
   const [error, setError] = useState("");
+
   const [avgtime, setAvgTime] = useState([]);
+
   const [loaded, setLoaded] = useState(false);
   const [salter, setSalter] = useState("");
   const [inline, setInline] = useState([]);
+  const [xload, setXload] = useState(false);
+  const MINUTE_MS = 1000;
+
+
   const handleLogout = async () => {
     setError("");
     const requestOptions = {
-        method: "POST",
+        method: "GET",
         headers: { "Authorization": `Bearer ${getToken()}`},
     };
   
@@ -22,7 +28,7 @@ function WorkerStartPage(props) {
         "/djelatnik/odjava",
         requestOptions
       )
-    .then(() =>{
+    .then((res) =>{
       removeUserSession();
       props.history.push("/login");
     }).catch((error)=> {
@@ -31,21 +37,26 @@ function WorkerStartPage(props) {
   }
 
   useEffect(() => {
+    setXload(false);
     setLoaded(false);
     const requestOptions = {
       method: "GET",
       headers: { Authorization: `Bearer ${getToken()}` },
     };
+
+
     fetch("/djelatnik/dohvatiProsjecnaVremena", requestOptions)
       .then((res) => {
         return res.text();
       })
       .then((fetchdata) => {
         setAvgTime(Object.entries(JSON.parse(fetchdata)));
+        setXload(true);
       })
       .catch((err) => {
         console.log("Critical server error[ODJELI]:", err);
       });
+
 
     fetch("/djelatnik/dohvatiSalter", requestOptions)
       .then((res) => {
@@ -54,27 +65,29 @@ function WorkerStartPage(props) {
       .then((res2) => {
         let a = JSON.parse(res2);
         let b = a.oznProzor;
-        console.log(b);
         setSalter(b);
       })
       .catch((error) => {
         console.log("Critical server error[Salter]", error);
         setError("Error:", error);
       });
-    fetch("/djelatnik/dohvatiRed", requestOptions)
+
+    const interval = setInterval(() =>{
+      fetch("/djelatnik/dohvatiRed", requestOptions)
       .then((res)=>{
         return res.text();
       }).then((res)=> {
-          setInline(JSON.parse(res));
-         
+          let a = JSON.parse(res);
+          setInline(a);
       }).catch((err)=>{
         console.log("critical server error",err);
       })
+    },MINUTE_MS);
+    
     setLoaded(true);
   }, []);
 
   const handlenext = async() =>{
-    console.log("tu sam");
     setLoaded(false);
     const requestOptions = {
       method: "GET",
@@ -94,8 +107,7 @@ function WorkerStartPage(props) {
     setLoaded(true);
     window.location.reload(false);
   };
-
-
+ 
   return (
     <div className={classes.pageContainer}>
       <span className={classes.usernameWorker}>DJELATNIK: {user}</span>
@@ -113,8 +125,7 @@ function WorkerStartPage(props) {
       <div className={classes.allOdjelContainer}>
         <div className={classes.listGridContainer}>
           <ul className={classes.listagrid}>
-            {loaded &&
-              avgtime.map(([key, value]) => {
+          {xload && avgtime.map(([key, value]) => {
                 return (
                   <li className={classes.listItemContainer} key={key}>
                     <ItemCardAvgTime
@@ -135,7 +146,7 @@ function WorkerStartPage(props) {
         <ul>
           {loaded && inline.map((i) =>{
             if(inline.indexOf(i) !== 0){
-              if(inline.length > 0){
+              if(i){
                 return (
                   <li className={classes.listItemContainer2}>A{i}<br /></li>
                 );
@@ -147,7 +158,7 @@ function WorkerStartPage(props) {
           })}
         </ul>
       </span>
-      <span className={classes.servedUser}>A{inline[0]}</span>
+      <span className={classes.servedUser}>{inline[0] && <div>A{inline[0]}</div>}</span>
       <span className={classes.servingTimeTxt}>
         PROSJEĆNO VRIJEME POSLUŽIVANJA
       </span>
@@ -157,3 +168,8 @@ function WorkerStartPage(props) {
 
 export default WorkerStartPage;
 
+/**
+ * 
+               
+
+ */

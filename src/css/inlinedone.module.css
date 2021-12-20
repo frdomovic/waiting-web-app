@@ -200,11 +200,12 @@
     width: 66px;
     color: rgba(255,255,255,1);
     position: absolute;
-    top: 370px;
-    left: 151px;
+    top: 0px;
+    left: 7px;
     font-family: Poppins;
     font-weight: Bold;
-    font-size: 24px;
+    font-size: 16px;
     opacity: 1;
-    text-align: left;
+    
+    z-index: 1;
   }

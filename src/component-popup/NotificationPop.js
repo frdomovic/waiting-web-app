@@ -18,7 +18,7 @@ export default function NotificationPop(props) {
         state: {
           redniBroj: location.state.redniBroj,
           salter: location.state.salter,
-          vrijeme: location.state.redniBroj,
+          vrijeme: location.state.vrijeme,
           clientId: location.state.clientId
         }
       });
