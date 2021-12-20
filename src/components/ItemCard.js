@@ -36,6 +36,7 @@ export default function ItemCard(props) {
         return res.text();
       })
       .then((res) => {
+        console.log(JSON.parse(res));
         data = JSON.parse(res);
       })
       .catch((err) => {

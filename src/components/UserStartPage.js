@@ -18,7 +18,6 @@ export default function UserStartPage() {
       .then((fetchdata) => {
         setjsonData(JSON.parse(fetchdata));
         console.log(JSON.parse(fetchdata));
-       
       })
       .catch((err) => {
         console.log("Critical server error:", err);
@@ -28,7 +27,7 @@ export default function UserStartPage() {
   const handleexit = ()=>{
     history.push("/");
   }
-
+  
   return (
     <div className={classes.pageContainer}>
       <span className={classes.appTitle}>RED U RED </span>
@@ -43,8 +42,8 @@ export default function UserStartPage() {
               return (
                 <li className={classes.listItemContainer} key={i.id}>
                 <ItemCard
-                  key={i.idodjel}
-                  id={i.idodjel}
+                  key={i.idOdjel}
+                  id={i.idOdjel}
                   odjeltitle={i.naziv}
                   odjeldesc={i.opis}
                   odjellong={i.dugiOpis}
