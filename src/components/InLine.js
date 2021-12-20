@@ -11,6 +11,7 @@ export default function InLine() {
   const history = useHistory();
   const [flag2, setflag2] = useState(true);
   let vrijeme;
+  let cflag = true;
   const [flag,setflag] = useState(true);
   useEffect(() => {
     const interval = setInterval(() =>{
@@ -31,16 +32,17 @@ export default function InLine() {
     }, MINUTE_MS);
     return () => clearInterval(interval);
   }, []);
-  
+
+
   var checkLine = setInterval(() =>{
     if(location.state.redniBroj == 1){
-      setflag(false);
-      
+      cflag = false;
     }
       
   }, LINE_MS);
-
-  if(!flag && !flag2){
+  
+  if(cflag && !flag2){
+    console.log("tu sam");
     setflag2(false);
     clearInterval(checkLine);
     history.push({
@@ -50,8 +52,7 @@ export default function InLine() {
       salter: location.state.salter,
       vrijeme: location.state.vrijeme,
       clientId: location.state.clientId
-      }});
-  }
+  }})};
   
 
   return (
@@ -77,4 +78,6 @@ export default function InLine() {
       </div>
     </body>
   );
+
 }
+

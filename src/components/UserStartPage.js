@@ -16,7 +16,8 @@ export default function UserStartPage() {
         return res.text();
       })
       .then((fetchdata) => {
-        setjsonData(JSON.parse(fetchdata))
+        setjsonData(JSON.parse(fetchdata));
+        console.log(JSON.parse(fetchdata));
        
       })
       .catch((err) => {
@@ -42,12 +43,12 @@ export default function UserStartPage() {
               return (
                 <li className={classes.listItemContainer} key={i.id}>
                 <ItemCard
-                  key={i.idOdjel}
-                  id={i.idOdjel}
+                  key={i.idodjel}
+                  id={i.idodjel}
                   odjeltitle={i.naziv}
                   odjeldesc={i.opis}
                   odjellong={i.dugiOpis}
-                  odjelpng=""
+                  odjelpng={i.imgsrc}
                   clientId={getID()}
                 />
               </li>
