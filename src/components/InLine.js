@@ -33,26 +33,22 @@ export default function InLine() {
     return () => clearInterval(interval);
   }, []);
 
-
   var checkLine = setInterval(() =>{
     if(location.state.redniBroj == 1){
-      cflag = false;
+      history.push({
+        pathname: '/inlinex',
+        state: {
+        redniBroj: location.state.redniBroj,
+        salter: location.state.salter,
+        vrijeme: location.state.vrijeme,
+        clientId: location.state.clientId
+      }});
     }
       
   }, LINE_MS);
   
-  if(cflag && !flag2){
-    console.log("tu sam");
-    setflag2(false);
-    clearInterval(checkLine);
-    history.push({
-      pathname: '/inlinex',
-      state: {
-      redniBroj: location.state.redniBroj,
-      salter: location.state.salter,
-      vrijeme: location.state.vrijeme,
-      clientId: location.state.clientId
-  }})};
+
+    
   
 
   return (
