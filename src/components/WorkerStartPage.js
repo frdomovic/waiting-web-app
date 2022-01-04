@@ -50,35 +50,19 @@ function WorkerStartPage(props) {
         return res.text();
       })
       .then((fetchdata) => {
-        setAvgTime(Object.entries(JSON.parse(fetchdata)));
+        setAvgTime(JSON.parse(fetchdata));
         setXload(true);
       })
       .catch((err) => {
         console.log("Critical server error[ODJELI]:", err);
       });
-
-
-    fetch("/djelatnik/dohvatiSalter", requestOptions)
-      .then((res) => {
-        return res.text();
-      })
-      .then((res2) => {
-        let a = JSON.parse(res2);
-        let b = a.oznProzor;
-        setSalter(b);
-      })
-      .catch((error) => {
-        console.log("Critical server error[Salter]", error);
-        setError("Error:", error);
-      });
-
     const interval = setInterval(() =>{
       fetch("/djelatnik/dohvatiRed", requestOptions)
       .then((res)=>{
         return res.text();
       }).then((res)=> {
-          let a = JSON.parse(res);
-          setInline(a);
+        setInline(JSON.parse(res));
+        
       }).catch((err)=>{
         console.log("critical server error",err);
       })
@@ -86,6 +70,27 @@ function WorkerStartPage(props) {
     
     setLoaded(true);
   }, []);
+
+  const getSalter = async() => {
+    const requestOptions = {
+      method: "GET",
+      headers: { Authorization: `Bearer ${getToken()}` },
+    };
+    fetch("/djelatnik/dohvatiSalter", requestOptions)
+    .then((res) => {
+      return res.text();
+    })
+    .then((res2) => {
+      let a = JSON.parse(res2);
+      let b = a.oznProzor;
+      setSalter(b);
+    })
+    .catch((error) => {
+      console.log("Critical server error[Salter]", error);
+      setError("Error:", error);
+    });
+  }
+  getSalter();
 
   const handlenext = async() =>{
     setLoaded(false);
@@ -125,17 +130,17 @@ function WorkerStartPage(props) {
       <div className={classes.allOdjelContainer}>
         <div className={classes.listGridContainer}>
           <ul className={classes.listagrid}>
-          {xload && avgtime.map(([key, value]) => {
+          {xload && avgtime.map((i) => {
                 return (
-                  <li className={classes.listItemContainer} key={key}>
+                  <li className={classes.listItemContainer} key={i.id}>
                     <ItemCardAvgTime
-                      key={key}
-                      odjeltitle={("odjel "+key)}
-                      odjeltime={value === null ? "0 MIN" : { value }}
+                      key={i.id}
+                      odjeltitle={("odjel "+i.id)}
+                      odjeltime={i.vrijeme === null ? "0 MIN" : i.vrijeme}
                     />
                   </li>
                 );
-              })}
+              })}    
           </ul>
         </div>
       </div>
@@ -148,7 +153,7 @@ function WorkerStartPage(props) {
             if(inline.indexOf(i) !== 0){
               if(i){
                 return (
-                  <li className={classes.listItemContainer2}>A{i}<br /></li>
+                  <li className={classes.listItemContainer2} key={i.klijentId}>{i.jedOzn}{i.klijentId}<br /></li>
                 );
 
               }
@@ -158,7 +163,7 @@ function WorkerStartPage(props) {
           })}
         </ul>
       </span>
-      <span className={classes.servedUser}>{inline[0] && <div>A{inline[0]}</div>}</span>
+      <span className={classes.servedUser}>{inline[0] && <div>{inline[0].jedOzn}{inline[0].klijentId}</div>}</span>
       <span className={classes.servingTimeTxt}>
         PROSJEĆNO VRIJEME POSLUŽIVANJA
       </span>
@@ -170,6 +175,16 @@ export default WorkerStartPage;
 
 /**
  * 
-               
+   {xload && avgtime.map((i) => {
+                return (
+                  <li className={classes.listItemContainer} key={i.id}>
+                    <ItemCardAvgTime
+                      key={i.id}
+                      odjeltitle={("odjel "+i.id)}
+                      odjeltime={i.vrijeme === null ? "0 MIN" : i.vrijeme}
+                    />
+                  </li>
+                );
+              })}            
 
  */

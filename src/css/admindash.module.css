@@ -1,0 +1,672 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    font-size: 14px;
+  }
+  html, body {
+      height: 100%;
+  }
+  
+  html {
+      display: table;
+      margin: auto;
+  }
+  
+  body {
+      display: table-cell;
+      vertical-align: middle;
+  }
+
+  .pageContainer {
+    width: 375px;
+    height: 812px;
+    background: rgba(59,47,59,1);
+    opacity: 1;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    border-style: solid;
+    border-width: thin;
+    border-color: rgba(255,255,255,1);
+  }
+  .usernameWorker {
+    width: 238px;
+    color: rgba(255,255,255,1);
+    position: absolute;
+    top: 22px;
+    left: 10px;
+    font-family: Poppins;
+    font-weight: SemiBold Italic;
+    font-size: 14px;
+    opacity: 1;
+    text-align: left;
+  }
+
+  .btnExit{
+    top: 14px;
+    right: 10px;
+    width: 60px;
+    background: rgba(236,199,191,1);
+    opacity: 1;
+    position: absolute;
+    color: rgba(255,255,255,1);
+    font-family: Poppins;
+    font-weight: SemiBold Italic;
+    font-size: 15px;
+    opacity: 1;
+    border: 0px;
+    text-align: center;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+    overflow: hidden;
+  }
+  .btnExit:hover{
+    background: transparent;
+    border: 1px solid;
+    border-color: rgba(140,202,197,1);
+    color: rgba(140,202,197,1);
+  }
+  .btnExitTxt{
+    color: white;
+  }
+
+ 
+  .workerboard {
+    width: 375px;
+    height: 287px;
+    background: rgba(254,234,230,1);
+    opacity: 1;
+    position: absolute;
+    top: 66px;
+    left: 0px;
+    border-top-left-radius: 47px;
+    border-top-right-radius: 47px;
+    border-bottom-left-radius: 47px;
+    border-bottom-right-radius: 47px;
+    overflow: hidden;
+  }
+  .boardtxt{
+    width: 64px;
+    color: rgba(98,84,93,1);
+    position: absolute;
+    top: 85px;
+    left: 36px;
+    font-family: Poppins;
+    font-weight: SemiBold Italic;
+    font-size: 18px;
+    opacity: 1;
+    text-align: left;
+  }
+  .btnadd{
+    width: 106px;
+    height: 30px;
+    background: rgba(59,47,59,1);
+    opacity: 1;
+    position: absolute;
+    top: 310px;
+    left: 30px;
+    color: rgba(255,255,255,1);
+    font-family: Poppins;
+    font-weight: SemiBold Italic;
+    font-size: 16px;
+    text-align: center;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    overflow: hidden;
+  }
+  .btndel {
+    width: 106px;
+    height: 30px;
+    background: rgba(59,47,59,1);
+    opacity: 1;
+    position: absolute;
+    top: 310px;
+    right: 30px;
+    color: rgba(255,255,255,1);
+    font-family: Poppins;
+    font-weight: SemiBold Italic;
+    font-size: 16px;
+    text-align: center;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    overflow: hidden;
+  }
+ 
+ 
+
+
+  /*PLOCA ZA DODAVANJE ODJELA */
+  .addboard {
+    width: 375px;
+    height: 80px;
+    background: rgba(254,234,230,1);
+    opacity: 1;
+    position: absolute;
+    top: 366px;
+    left: 0px;
+    border-top-left-radius: 47px;
+    border-top-right-radius: 47px;
+    border-bottom-left-radius: 47px;
+    border-bottom-right-radius: 47px;
+    overflow: hidden;
+  }
+  
+  .addtxt{
+    width: 130px;
+    color: rgba(98,84,93,1);
+    position: absolute;
+    top: 390px;
+    left: 36px;
+    font-family: Poppins;
+    font-weight: SemiBold Italic;
+    font-size: 18px;
+    opacity: 1;
+    text-align: left;
+  }
+  .btndodjeli{
+    width: 106px;
+    height: 30px;
+    background: rgba(59,47,59,1);
+    opacity: 1;
+    position: absolute;
+    top: 390px;
+    right: 30px;
+    color: rgba(255,255,255,1);
+    font-family: Poppins;
+    font-weight: SemiBold Italic;
+    font-size: 16px;
+    text-align: center;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    overflow: hidden;
+  }
+
+  
+  
+  
+  
+  
+  /*PLOCA ZAHHTJEVA ZA RESET ŠIFRE */
+  .resetboard {
+    width: 375px;
+    height: 250px;
+    background: rgba(254,234,230,1);
+    opacity: 1;
+    position: absolute;
+    top: 460px;
+    left: 0px;
+    border-top-left-radius: 47px;
+    border-top-right-radius: 47px;
+    border-bottom-left-radius: 47px;
+    border-bottom-right-radius: 47px;
+    overflow: hidden;
+  }
+  .resettxt{
+    width: 180px;
+    color: rgba(98,84,93,1);
+    position: absolute;
+    top: 480px;
+    left: 36px;
+    font-family: Poppins;
+    font-weight: SemiBold Italic;
+    font-size: 18px;
+    opacity: 1;
+    text-align: left;
+  }
+  
+  .btnreset{
+    width: 106px;
+    height: 30px;
+    background: rgba(59,47,59,1);
+    opacity: 1;
+    position: absolute;
+    top: 660px;
+    right: 30px;
+    color: rgba(255,255,255,1);
+    font-family: Poppins;
+    font-weight: SemiBold Italic;
+    font-size: 16px;
+    text-align: center;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    overflow: hidden;
+  }
+  
+  /*ispis svih djelatnika*/
+  .listGridContainer {
+    top: 120px;
+    left: 15px;
+    overflow-y: scroll;
+    position: absolute;
+    width: 360px;
+    height: 190px;
+  }
+  .listagrid {
+    right: 10px;
+    columns: 1;
+    position: absolute;
+    width: 348px;
+  }
+  .listItemContainer {
+    list-style: none;
+    margin-top: 10px;
+    
+  }
+  .workerlist{
+      color: brown;
+      top: 10px;
+      margin-top: 10px;
+  }
+
+  /*popis djelatnika kojima treba resetirati šifru */
+  .listGridContainer2 {
+    top: 540px;
+    left: 15px;
+    position: absolute;
+    width: 360px;
+    height: 90px;
+  }
+  .listagrid2 {
+    right: 10px;
+    columns: 1;
+    position: absolute;
+    width: 348px;
+  }
+  .listItemContainer2 {
+    list-style: none;
+    margin-top: 10px;
+    
+  }
+  .workerlist2{
+      color: brown;
+      top: 10px;
+      margin-top: 10px;
+  }
+  .dodjelitext{
+    color: rgba(98,84,93,1);
+  }
+  .circle1 {
+    width: 120px;
+    height: 124px;
+    background: rgba(236,199,191,1);
+    opacity: 1;
+    position: absolute;
+    top: 725px;
+    left: 210px;
+    border-radius: 50%;
+  }
+  .circle2 {
+    width: 211px;
+    height: 211px;
+    background: rgba(249,174,135,1);
+    opacity: 1;
+    position: absolute;
+    top: 730px;
+    left: 90px;
+    border-radius: 50%;
+  }
+  .circle3 {
+    width: 145px;
+    height: 145px;
+    background: rgba(140,202,197,1);
+    opacity: 1;
+    position: absolute;
+    top: 750px;
+    left: 60px;
+    border-radius: 50%;
+  }
+  .addusertext{
+      position: absolute;
+      z-index: 2;
+      color: white;
+      top: 80px;
+      left:80px;
+  }
+
+  .workerboard2 {
+    width: 375px;
+    height: 487px;
+    background: rgb(0, 0, 0);
+    opacity: 0.8;
+    position: absolute;
+    top: 65px;
+    left: 0px;
+    border-top-left-radius: 47px;
+    border-top-right-radius: 47px;
+    border-bottom-left-radius: 47px;
+    border-bottom-right-radius: 47px;
+    overflow: hidden;
+    z-index: 1;
+  }
+  .titleemail {
+    width: 250px;
+    background: transparent;
+    color: rgba(145,145,145,1);
+    position: absolute;
+    top: 166px;
+    left: 39px;
+    font-family: Poppins;
+    font-weight: SemiBold Italic;
+    font-size: 14px;
+    opacity: 1;
+    z-index: 2;
+    text-align: left;
+    padding-left: 10px;
+    border: hidden;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;;
+  }
+  .titleodjel {
+    width: 250px;
+    background: transparent;
+    color: rgba(145,145,145,1);
+    position: absolute;
+    top: 221px;
+    left: 39px;
+    font-family: Poppins;
+    font-weight: SemiBold Italic;
+    font-size: 14px;
+    opacity: 1;
+    z-index: 2;
+    text-align: left;
+    padding-left: 10px;
+    border: hidden;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;;
+  }
+  .underline2{
+    position:absolute;
+    width: 295px;
+    height: 1px;
+    background: rgba(236,199,191,0.5);
+    top: 200px;
+    left: 32px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    overflow: hidden;
+    z-index: 2;
+  }
+  .underline1{
+    position:absolute;
+    width: 295px;
+    height: 1px;
+    background: rgba(236,199,191,0.5);
+    top: 255px;
+    left: 32px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    overflow: hidden;
+    z-index: 2;
+  }
+  .submitAdd{
+    top: 230px;
+    left: 112px;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+  }
+  .btnsend{
+    margin: auto;
+    width: 129px;
+    height: 33px;
+    background: rgba(236,199,191,1);
+    padding: 3px 44px;
+    color: rgba(255,255,255,1);
+    font-family: Poppins;
+    font-weight: SemiBold Italic;
+    font-size: 14px;
+    text-align: center;
+    border-color: transparent;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;
+    z-index: 2;
+  }
+  .btnsend:hover{
+    color:rgba(140,202,197,1);
+    background-color: transparent;
+    border-color: rgba(140,202,197,1);
+  }
+  .submitAdd2{
+    top: 280px;
+    left: 112px;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+  }
+
+
+  .backbtn {
+    width: 30px;
+    height: 30px;
+    background: rgba(236,199,191,1);
+    color: white;
+    position: absolute;
+    top: 80px;
+    right: 22px;
+    font-size: 20px;
+    font: bold;
+    border-radius: 50%;
+    z-index: 2;
+    text-align: center;
+  }
+  .backbtn:hover{
+    background: transparent;
+    border-color: rgba(140,202,197,1);
+    border: 1px solid;
+  }
+
+  .dotext{
+    position: absolute;
+    top: 350px;
+    z-index: 2;
+    left: 40px;
+    font-size: large;
+    color: white;
+  }
+  .submitAdd2{
+    top: 490px;
+    left: 112px;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+  }
+  .titlenaziv {
+    width: 250px;
+    background: transparent;
+    color: rgba(145,145,145,1);
+    position: absolute;
+    top: 140px;
+    left: 39px;
+    font-family: Poppins;
+    font-weight: SemiBold Italic;
+    font-size: 14px;
+    opacity: 1;
+    z-index: 2;
+    text-align: left;
+    padding-left: 10px;
+    border: hidden;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;;
+  }
+  .titleopis {
+    width: 250px;
+    background: transparent;
+    color: rgba(145,145,145,1);
+    position: absolute;
+    top: 190px;
+    left: 39px;
+    font-family: Poppins;
+    font-weight: SemiBold Italic;
+    font-size: 14px;
+    opacity: 1;
+    z-index: 2;
+    text-align: left;
+    padding-left: 10px;
+    border: hidden;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;;
+  }
+  .titledopis {
+    width: 250px;
+    background: transparent;
+    color: rgba(145,145,145,1);
+    position: absolute;
+    top: 240px;
+    left: 39px;
+    font-family: Poppins;
+    font-weight: SemiBold Italic;
+    font-size: 14px;
+    opacity: 1;
+    z-index: 2;
+    text-align: left;
+    padding-left: 10px;
+    border: hidden;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;;
+  }
+  .titleimgsrc {
+    width: 250px;
+    background: transparent;
+    color: rgba(145,145,145,1);
+    position: absolute;
+    top: 290px;
+    left: 39px;
+    font-family: Poppins;
+    font-weight: SemiBold Italic;
+    font-size: 14px;
+    opacity: 1;
+    z-index: 2;
+    text-align: left;
+    padding-left: 10px;
+    border: hidden;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;;
+  }
+  .titleoznaka {
+    width: 250px;
+    background: transparent;
+    color: rgba(145,145,145,1);
+    position: absolute;
+    top: 340px;
+    left: 39px;
+    font-family: Poppins;
+    font-weight: SemiBold Italic;
+    font-size: 14px;
+    opacity: 1;
+    z-index: 2;
+    text-align: left;
+    padding-left: 10px;
+    border: hidden;
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    border-bottom-left-radius: 11px;
+    border-bottom-right-radius: 11px;;
+  }
+  .underline20{
+    position:absolute;
+    width: 295px;
+    height: 1px;
+    background: rgba(236,199,191,0.5);
+    top: 175px;
+    left: 32px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    overflow: hidden;
+    z-index: 2;
+  }
+  .underline21{
+    position:absolute;
+    width: 295px;
+    height: 1px;
+    background: rgba(236,199,191,0.5);
+    top: 225px;
+    left: 32px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    overflow: hidden;
+    z-index: 2;
+  }
+  .underline22{
+    position:absolute;
+    width: 295px;
+    height: 1px;
+    background: rgba(236,199,191,0.5);
+    top: 275px;
+    left: 32px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    overflow: hidden;
+    z-index: 2;
+  }
+  .underline23{
+    position:absolute;
+    width: 295px;
+    height: 1px;
+    background: rgba(236,199,191,0.5);
+    top: 325px;
+    left: 32px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    overflow: hidden;
+    z-index: 2;
+  }
+  .underline24{
+    position:absolute;
+    width: 295px;
+    height: 1px;
+    background: rgba(236,199,191,0.5);
+    top: 375px;
+    left: 32px;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    overflow: hidden;
+    z-index: 2;
+  }
+  .dotext2{
+    position: absolute;
+    top: 410px;
+    z-index: 2;
+    left: 40px;
+    font-size: large;
+    color: white;
+  }

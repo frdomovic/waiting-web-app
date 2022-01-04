@@ -13,6 +13,8 @@ import PublicRoute from "../Utils/PublicRoute";
 import NotificationPop from "../component-popup/NotificationPop";
 import Signup from "./Signup";
 import Odjeldesc from "./OdjelDesc"
+import Admin from "./Admin";
+import PrivateRouteAdmin from "../Utils/PrivateRouteAdmin";
 
 function App() {
   return (
@@ -28,6 +30,7 @@ function App() {
           <Route path="/Signup" component={Signup} />
           <Route path="/odjeldesc" component={Odjeldesc} />
           <Route path="/notificationpop" component={NotificationPop} />
+          <PrivateRouteAdmin path="/admindash" component={Admin} />
         </Switch>
       </Router>
     </div>

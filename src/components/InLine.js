@@ -4,15 +4,23 @@ import { useLocation, useHistory } from "react-router-dom";
 
 export default function InLine() {
   const [notificationstatus, setNotificationstatus] = useState(true);
+
   const [ntime, setTime] = useState("");
+  const [loadedtime, setLoadedtime] = useState(false);
+
+  const [nline, setLine] = useState("");
+  const [loadedline, setLoadedline] = useState(false);
+
+  const [numin, setNumin] = useState("");
+  const [redi, setRedi] = useState(false);
+
   const location = useLocation();
+  const history = useHistory();
+
   const MINUTE_MS = 1000;
   const LINE_MS = 10000;
-  const history = useHistory();
-  const [flag2, setflag2] = useState(true);
-  let vrijeme;
-  let cflag = true;
-  const [flag,setflag] = useState(true);
+
+  
   useEffect(() => {
     const interval = setInterval(() =>{
       const requestOptions = {
@@ -24,15 +32,65 @@ export default function InLine() {
       .then((res)=>{
         return res.text();
       }).then((res)=>{
-        setTime(res/60);
+
+        setTime(Math.round(res/60));
+        setLoadedtime(true);
+
+      }).catch((err) =>{
+        console.log("Critical server error",err);
+      })
+     
+      fetch("/klijent/sinkronizacijaReda",requestOptions)
+      .then((res)=>{
+        return res.text();
+      }).then((res)=>{
+
+        setLine(res);
+        setLoadedline(true);
+
       }).catch((err) =>{
         console.log("Critical server error",err);
       })
 
+
+      fetch("/klijent/sinkronizacijaReda",requestOptions)
+      .then((res)=>{
+        return res.text();
+      }).then((res)=>{
+          setNumin(res);
+          putInLine();
+      }).catch((err) =>{
+        console.log("Critical error sinkronizacija vremena",err);
+      })
+
     }, MINUTE_MS);
-    return () => clearInterval(interval);
+
+
+    
   }, []);
 
+  const putInLine = async () =>{
+    if(!loadedline){
+      if(numin === 1){
+        setLoadedline(true);
+        const requestOptions = {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: location.state.clientId,
+        };
+        console.log("TUUU SAMMM");
+        await fetch("/klijent/dosaoNaRed",requestOptions)  
+          .catch((err) =>{
+            console.log("Critical error stavljanje u red",err);
+        })
+
+      }
+    }  
+
+  };
+
+  /*
+    return () => clearInterval(interval);
   var checkLine = setInterval(() =>{
     if(location.state.redniBroj == 1){
       history.push({
@@ -45,11 +103,8 @@ export default function InLine() {
       }});
     }
       
-  }, LINE_MS);
-  
+  }, LINE_MS);*/
 
-    
-  
 
   return (
     <body>
@@ -65,10 +120,12 @@ export default function InLine() {
         <div className={classes.v20_141}></div>
         
         <span className={classes.v23_2}>POZICIJA U REDU:</span>
-        <span className={classes.v23_3}>{location.state.redniBroj}</span>
+        {!loadedline && <span className={classes.v23_3}>{nline}</span>}
+        {loadedline && <span className={classes.v23_3}>{location.state.redniBroj}</span>}
 
         <span className={classes.v20_142}>Procjena do dolska na red:</span>
-        <span className={classes.v20_143}>{Math.round(ntime)} MIN</span>
+        {loadedtime && <span className={classes.v20_143}>{ntime} MIN</span>}
+        {!loadedtime && <span className={classes.v20_143}>{location.state.vrijeme } MIN</span>}
         <div className={classes.name}></div>
         <div className={classes.name}></div>
       </div>

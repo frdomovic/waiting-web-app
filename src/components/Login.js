@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Form, Button, Alert } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import { setToken,getToken, setUser, setUserSession } from "../Utils/Common";
+import { setAdminSession, setUserSession } from "../Utils/Common";
 import * as ReactBootStrap from 'react-bootstrap';
 import classes from "../css/workerLP.module.css";
 import showlogo from "../media/showlogo.png";
@@ -60,9 +60,17 @@ export default function Login(props) {
               setUserSession(tokenstr, username);
               props.history.push("/Signup");
             }else{
-                setUserSession(tokenstr, username);
-                props.history.push("/WorkerStartPage");
-                console.log("ok");
+                if(username === "admin@admin.redured.org"){
+                  setAdminSession(tokenstr, username, "admin");
+                  props.history.push("/admindash");
+                  console.log("ok admin");
+
+                }else{
+                  setUserSession(tokenstr, username);
+                  props.history.push("/WorkerStartPage");
+                  console.log("ok");
+                }
+                
             }
           }    
       })

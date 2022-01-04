@@ -19,6 +19,13 @@ export const getPWstatus = () =>{
 export const getToken = () => {
     return sessionStorage.getItem("token") || null;
 }
+export const getWork = () => {
+    if(getAdmin()){
+        return null;
+    }else{
+        return sessionStorage.getItem("token") || null;
+    }
+}
 export const setToken = (token) => {
     sessionStorage.setItem("token",token);
 }
@@ -33,6 +40,16 @@ export const setUserSession = (token, user) => {
     sessionStorage.setItem("token", token);
     sessionStorage.setItem("user", JSON.stringify(user));
 }
+export const setAdminSession = (token, user,admin) => {
+    sessionStorage.setItem("token", token);
+    sessionStorage.setItem("user", JSON.stringify(user));
+    sessionStorage.setItem("admin",admin);
+}
+export const getAdmin = () =>{
+    return sessionStorage.getItem("admin") || null;
+}
+
+
 
 export const removeUser = () => {
     sessionStorage.removeItem("user");
@@ -43,4 +60,5 @@ export const removeUserSession = () => {
     sessionStorage.removeItem("user");
     sessionStorage.removeItem("status");
     sessionStorage.removeItem("id");
+    sessionStorage.removeItem("admin");
 }

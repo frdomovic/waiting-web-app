@@ -1,0 +1,4 @@
+TEST=true mvn exec:java -Dexec.mainClass=hr.fer.progi.projekt.redured.ReduredApplication
+ UPDATE prozor SET djelatnik_iddjelatnik = null
+ DELETE * FROM klijent
+ 
