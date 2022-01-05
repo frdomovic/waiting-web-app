@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import classes from "../css/itemcard.module.css";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 export default function ItemCard(props) {
   const [loading, setLoading] = useState(false);
@@ -36,7 +36,6 @@ export default function ItemCard(props) {
         return res.text();
       })
       .then((res) => {
-        console.log(JSON.parse(res));
         data = JSON.parse(res);
       })
       .catch((err) => {
@@ -60,6 +59,7 @@ export default function ItemCard(props) {
   } else {
     return (
       <div>
+        {loading && <div>Loading...{loading}</div>}
         <div className={classes.cardItem}>
           <img
             src={props.odjelpng}

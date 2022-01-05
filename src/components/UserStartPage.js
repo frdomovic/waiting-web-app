@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
 import classes from "../css/userStartPage.module.css";
 import ItemCard from "./ItemCard";
-import { Link, useLocation,useHistory } from "react-router-dom";
-import { setID,getID} from "../Utils/Common";
+import { useHistory } from "react-router-dom";
+import { getID} from "../Utils/Common";
 export default function UserStartPage() {
   const [jsondata, setjsonData] = useState([]);
   const [loaded, setLoaded] = useState(false);
-  const location = useLocation();
   const history = useHistory();
-  const [clientId, setClientId] = useState("");
+ 
   useEffect(() => {
     setLoaded(false);
     fetch("/odjel")
@@ -17,7 +16,6 @@ export default function UserStartPage() {
       })
       .then((fetchdata) => {
         setjsonData(JSON.parse(fetchdata));
-        console.log(JSON.parse(fetchdata));
       })
       .catch((err) => {
         console.log("Critical server error:", err);

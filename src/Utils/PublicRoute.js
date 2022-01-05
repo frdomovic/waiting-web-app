@@ -3,7 +3,6 @@ import {Route, Redirect} from "react-router-dom";
 import { getWork, getAdmin } from "./Common";
 
 const PublicRoute = ({component: Component, ...rest}) =>{
-    console.log(getWork());
     return (
         <Route
             {...rest}

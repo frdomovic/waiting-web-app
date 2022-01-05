@@ -67,8 +67,9 @@ function WorkerStartPage(props) {
         console.log("critical server error",err);
       })
     },MINUTE_MS);
-    
     setLoaded(true);
+    return () => clearInterval(interval);
+    
   }, []);
 
   const getSalter = async() => {
@@ -115,7 +116,8 @@ function WorkerStartPage(props) {
  
   return (
     <div className={classes.pageContainer}>
-      <span className={classes.usernameWorker}>DJELATNIK: {user}</span>
+      {!error && <span className={classes.usernameWorker}>DJELATNIK: {user}</span>}
+      {error && <span className={classes.usernameWorker}>err:{error}</span>}
       <Button className={classes.btnExit} onClick={handleLogout}>
         <span className={classes.btnExitTxt}>IZLAZ</span>
       </Button>
@@ -136,7 +138,7 @@ function WorkerStartPage(props) {
                     <ItemCardAvgTime
                       key={i.id}
                       odjeltitle={("odjel "+i.id)}
-                      odjeltime={i.vrijeme === null ? "0 MIN" : i.vrijeme}
+                      odjeltime={i.vrijeme === null ? "0 MIN" : `${Math.round(i.vrijeme/60)} MIN`}
                     />
                   </li>
                 );
@@ -150,15 +152,8 @@ function WorkerStartPage(props) {
       <span className={classes.usersInLine}>
         <ul>
           {loaded && inline.map((i) =>{
-            if(inline.indexOf(i) !== 0){
-              if(i){
-                return (
-                  <li className={classes.listItemContainer2} key={i.klijentId}>{i.jedOzn}{i.klijentId}<br /></li>
-                );
-
-              }
-             
-            }
+            return inline.indexOf(i) !== 0 ? <li className={classes.listItemContainer2} key={i.klijentId}>{i.jedOzn}{i.klijentId}<br /></li>
+                : ""
            
           })}
         </ul>
@@ -174,17 +169,14 @@ function WorkerStartPage(props) {
 export default WorkerStartPage;
 
 /**
- * 
-   {xload && avgtime.map((i) => {
+ *  if(inline.indexOf(i) !== 0){
+              if(i){
                 return (
-                  <li className={classes.listItemContainer} key={i.id}>
-                    <ItemCardAvgTime
-                      key={i.id}
-                      odjeltitle={("odjel "+i.id)}
-                      odjeltime={i.vrijeme === null ? "0 MIN" : i.vrijeme}
-                    />
-                  </li>
+                  <li className={classes.listItemContainer2} key={i.klijentId}>{i.jedOzn}{i.klijentId}<br /></li>
                 );
-              })}            
 
+              }
+             
+            }
+            return;
  */

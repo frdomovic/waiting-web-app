@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState , useEffect} from "react";
 import { Form, Button, Alert } from "react-bootstrap";
 import { Link, useHistory} from "react-router-dom";
 import * as ReactBootStrap from 'react-bootstrap';
@@ -29,20 +29,22 @@ export default function Signup(props) {
 
   console.log(getToken());
   if(getPWstatus()){
-    setError=(getPWstatus());
+    setError(getPWstatus());
   }
-  const useEffect = () => {
+  useEffect(()=>{
     return () => {
       if(history.action === "POP"){
         history.replace("/WorkerStartPage", null, "/login");
       } 
     }
-  };
+  });
   const handleLogin = async (e) => {
     e.preventDefault();
     setError(null);
     setLoading(true);
-
+    if(!username){
+      setError("Nije uneseno korisničko ime");
+    }
     if(password !== passconfirm){
       setLoading(false);
       setError("Loznike se ne podudaraju!");

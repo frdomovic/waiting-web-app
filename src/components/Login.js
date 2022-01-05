@@ -5,7 +5,7 @@ import { setAdminSession, setUserSession } from "../Utils/Common";
 import * as ReactBootStrap from 'react-bootstrap';
 import classes from "../css/workerLP.module.css";
 import showlogo from "../media/showlogo.png";
-import LoginPop from "../component-popup/LoginPop";
+
 
 export default function Login(props) {
   const [username, setUsername] = useState("");
@@ -14,11 +14,8 @@ export default function Login(props) {
   const [loading, setLoading] = useState(false);
   const [show, setShow] = useState(false);
   const [account, setAccount] = useState(false);
-  const [recovery, setRecovery] = useState(false);
-  const recoverypopup = () => {
-    setRecovery(true);
-  }
-
+  
+ 
   const handleLogin = async (e) => {
     e.preventDefault();
     setAccount(false);
@@ -83,8 +80,6 @@ export default function Login(props) {
   };
   return (
     <div className={classes.containerPage}>
-      {recovery && <LoginPop trigger={true}>
-        </LoginPop>}
       {loading && <ReactBootStrap.Spinner animation="border" variant="info" className={classes.spinner}/>}
       <span className={classes.titlePrijava}>Prijava za djelatnike </span>
 
@@ -147,14 +142,7 @@ export default function Login(props) {
           </Button>
         </div>
       </Form>
-      <div className={classes.containerbottom}>
-        <div className={classes.recoverydiv}>
-          <span className={classes.txtForgot}>Zaboravljena </span>
-          <a href="#" className={classes.txtRecover} onClick={recoverypopup}>
-            lozinka?
-          </a>
-        </div>
-      </div>
+      
     </div>
   );
 }

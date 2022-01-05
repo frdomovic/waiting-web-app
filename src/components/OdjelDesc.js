@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React from "react";
 import classes from "../css/odjeldesc.module.css";
 import { Link, useLocation,useHistory  } from "react-router-dom";
 

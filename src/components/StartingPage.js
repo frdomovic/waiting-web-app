@@ -1,19 +1,18 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
-import { getID, setID } from "../Utils/Common";
+import { setID } from "../Utils/Common";
 import classes from "../css/StartingPage.module.css";
 
 export default function StartingPage(props) {
   const history = useHistory();
-  const [clientId, setClientId] = useState("");
   const [loading, setLoading] = useState(false);
-  const [errror, setError] = useState("");
+  const [error, setError] = useState("");
   const handleClient = async (e) => {
+
       e.preventDefault();
       setError("");
       setLoading(true);
       let idNumber;
-
       await fetch("/klijent/registriraj")
       .then((res) =>{
         return res.text();
@@ -36,6 +35,8 @@ export default function StartingPage(props) {
 
   return (
     <div className={classes.mainContainer}>
+      {error && <div>{error}</div>}
+      {loading && <div>LOADING...{loading}</div>}
       <button className={classes.btnKlijent} onClick={handleClient}>
         <span className={classes.txtKlijent}>ulaz klijent</span>
       </button>
