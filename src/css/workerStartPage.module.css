@@ -1,298 +1,298 @@
 * {
-    box-sizing: border-box;
-  }
-  body {
-    font-size: 14px;
-  }
-  html, body {
-      height: 100%;
-  }
+  box-sizing: border-box;
+}
+body {
+  font-size: 14px;
+}
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+}
+.pageContainer {
+  width: 375px;
+  height: 812px;
+  background: rgba(59,47,59,1);
+  opacity: 1;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  border-style: solid;
+  border-width: thin;
+  border-color: rgba(255,255,255,1);
+}
+.usernameWorker {
+  width: 238px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 22px;
+  left: 10px;
+  font-family: Poppins;
+  font-weight: SemiBold Italic;
+  font-size: 14px;
+  opacity: 1;
+  text-align: left;
+}
+.v20_219 {
+  width: 16px;
+  height: 4px;
+  background: rgba(236,199,191,1);
+  opacity: 1;
+  position: absolute;
+  top: 20px;
+  left: 12px;
+  overflow: hidden;
+}
+.v20_220 {
+  width: 16px;
+  height: 4px;
+  background: rgba(236,199,191,1);
+  opacity: 1;
+  position: absolute;
+  top: 27px;
+  left: 12px;
+  overflow: hidden;
+}
+.v20_221 {
+  width: 16px;
+  height: 4px;
+  background: rgba(236,199,191,1);
+  opacity: 1;
+  position: absolute;
+  top: 34px;
+  left: 12px;
+  overflow: hidden;
+}
+.btnExit{
+  top: 14px;
+  right: 10px;
+  width: 60px;
+  background: rgba(236,199,191,1);
+  opacity: 1;
+  position: absolute;
+  color: rgba(255,255,255,1);
+  font-family: Poppins;
+  font-weight: SemiBold Italic;
+  font-size: 15px;
+  opacity: 1;
+  border: 0px;
+  text-align: center;
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
+  border-bottom-left-radius: 11px;
+  border-bottom-right-radius: 11px;
+  overflow: hidden;
+}
+.btnExit:hover{
+  background: transparent;
+  border: 1px solid;
+  border-color: rgba(140,202,197,1);
+  color: rgba(140,202,197,1);
+}
+.name {
+  color: #fff;
+}
+.odjelContainers {
+  width: 375px;
+  height: 787px;
+  background: rgba(254,234,230,1);
+  opacity: 1;
+  position: absolute;
+  top: 66px;
+  left: 0px;
+  border-top-left-radius: 47px;
+  border-top-right-radius: 47px;
+  border-bottom-left-radius: 47px;
+  border-bottom-right-radius: 47px;
+  overflow: hidden;
+}
+.salterTxt {
+  width: 115px;
+  color: rgba(98,84,93,1);
+  position: absolute;
+  top: 87px;
+  left: 37px;
+  font-family: Poppins;
+  font-weight: SemiBold Italic;
+  font-size: 18px;
+  opacity: 1;
+  text-align: left;
+}
+.runningSalter{
+  width: 29px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 83px;
+  left: 161px;
+  font-family: Poppins;
+  font-weight: ExtraBold Italic;
+  font-size: 24px;
+  opacity: 1;
+  text-align: left;
+}
+.lineTxt {
+  width: 64px;
+  color: rgba(98,84,93,1);
+  position: absolute;
+  top: 144px;
+  left: 36px;
+  font-family: Poppins;
+  font-weight: SemiBold Italic;
+  font-size: 18px;
+  opacity: 1;
+  text-align: left;
+}
+.currentlyServing {
+  width: 116px;
+  color: rgba(98,84,93,1);
+  position: absolute;
+  top: 144px;
+  left: 220px;
+  font-family: Poppins;
+  font-weight: SemiBold Italic;
+  font-size: 18px;
+  opacity: 1;
+  text-align: left;
+}
+.name {
+  color: #fff;
+}
+.name {
+  color: #fff;
+}
+
+.inLineContainer {
+  width: 137px;
+  height: 330px;
+  background: rgba(236,199,191,1);
+  opacity: 1;
+  position: absolute;
+  top: 190px;
+  left: 24px;
+  border-top-left-radius: 21px;
+  border-top-right-radius: 21px;
+  border-bottom-left-radius: 21px;
+  border-bottom-right-radius: 21px;
+  overflow: hidden;
+}
+.currentServingContainer {
+  width: 137px;
+  height: 330px;
+  background: rgba(236,199,191,1);
+  opacity: 1;
+  position: absolute;
+  top: 190px;
+  left: 215px;
+  border-top-left-radius: 21px;
+  border-top-right-radius: 21px;
+  border-bottom-left-radius: 21px;
+  border-bottom-right-radius: 21px;
+  overflow: hidden;
+}
+.btnExitTxt{
+  color: white;
+}
+.btnNext {
+  width: 106px;
+  height: 30px;
+  background: rgba(59,47,59,1);
+  opacity: 1;
+  position: absolute;
+  top: 476px;
+  left: 231px;
+  color: rgba(255,255,255,1);
+  font-family: Poppins;
+  font-weight: SemiBold Italic;
+  font-size: 16px;
+  text-align: center;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
+  overflow: hidden;
+}
+.usersInLine {
+  width: 101px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 212px;
+  left: 40px;
+  font-family: Poppins;
+  font-weight: Bold italic;
+  font-size: 28px;
+  opacity: 1;
+  text-align: left;
+  white-space: pre-wrap;
+}
+.servedUser {
+  width: 58px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 212px;
+  left: 250px;
+  font-family: Poppins;
+  font-weight: Bold Italic;
+  font-size: 28px;
+  opacity: 1;
+  text-align: left;
+}
+.servingTimeTxt {
+  width: 237px;
+  color: rgba(255,255,255,1);
+  position: absolute;
+  top: 547px;
+  left: 35px;
+  font-family: Poppins;
+  font-weight: SemiBold Italic;
+  font-size: 13px;
+  opacity: 1;
+  text-align: left;
+}
+.allOdjelContainer {
+  width: 348px;
+  height: 266px;
+  background: rgba(59,47,59,1);
+  opacity: 1;
+  position: absolute;
+  top: 533px;
+  left: 14px;
+  border-top-left-radius: 34px;
+  border-top-right-radius: 34px;
+  border-bottom-left-radius: 34px;
+  border-bottom-right-radius: 34px;
+  overflow: hidden;
+}
+.listGridContainer {
+  top: 38px;
+  left: 15px;
+  overflow-y: scroll;
+  position: absolute;
+  width: 360px;
+  height: 240px;
   
-  html {
-      display: table;
-      margin: auto;
-  }
+}
+.listItemContainer {
+  list-style: none;
+  display: inline-block;
+
+}
+.listagrid {
+  right: 30px;
+  columns: 3;
+  position: absolute;
+  width: 348px;
+}
+.listItemContainer2 {
+  list-style: none;
+  display: inline-block;
   
-  body {
-      display: table-cell;
-      vertical-align: middle;
-  }
-  .pageContainer {
-    width: 375px;
-    height: 812px;
-    background: rgba(59,47,59,1);
-    opacity: 1;
-    position: relative;
-    top: 0px;
-    left: 0px;
-    overflow: hidden;
-    border-style: solid;
-    border-width: thin;
-    border-color: rgba(255,255,255,1);
-  }
-  .usernameWorker {
-    width: 238px;
-    color: rgba(255,255,255,1);
-    position: absolute;
-    top: 22px;
-    left: 10px;
-    font-family: Poppins;
-    font-weight: SemiBold Italic;
-    font-size: 14px;
-    opacity: 1;
-    text-align: left;
-  }
-  .v20_219 {
-    width: 16px;
-    height: 4px;
-    background: rgba(236,199,191,1);
-    opacity: 1;
-    position: absolute;
-    top: 20px;
-    left: 12px;
-    overflow: hidden;
-  }
-  .v20_220 {
-    width: 16px;
-    height: 4px;
-    background: rgba(236,199,191,1);
-    opacity: 1;
-    position: absolute;
-    top: 27px;
-    left: 12px;
-    overflow: hidden;
-  }
-  .v20_221 {
-    width: 16px;
-    height: 4px;
-    background: rgba(236,199,191,1);
-    opacity: 1;
-    position: absolute;
-    top: 34px;
-    left: 12px;
-    overflow: hidden;
-  }
-  .btnExit{
-    top: 14px;
-    right: 10px;
-    width: 60px;
-    background: rgba(236,199,191,1);
-    opacity: 1;
-    position: absolute;
-    color: rgba(255,255,255,1);
-    font-family: Poppins;
-    font-weight: SemiBold Italic;
-    font-size: 15px;
-    opacity: 1;
-    border: 0px;
-    text-align: center;
-    border-top-left-radius: 11px;
-    border-top-right-radius: 11px;
-    border-bottom-left-radius: 11px;
-    border-bottom-right-radius: 11px;
-    overflow: hidden;
-  }
-  .btnExit:hover{
-    background: transparent;
-    border: 1px solid;
-    border-color: rgba(140,202,197,1);
-    color: rgba(140,202,197,1);
-  }
-  .name {
-    color: #fff;
-  }
-  .odjelContainers {
-    width: 375px;
-    height: 787px;
-    background: rgba(254,234,230,1);
-    opacity: 1;
-    position: absolute;
-    top: 66px;
-    left: 0px;
-    border-top-left-radius: 47px;
-    border-top-right-radius: 47px;
-    border-bottom-left-radius: 47px;
-    border-bottom-right-radius: 47px;
-    overflow: hidden;
-  }
-  .salterTxt {
-    width: 115px;
-    color: rgba(98,84,93,1);
-    position: absolute;
-    top: 87px;
-    left: 37px;
-    font-family: Poppins;
-    font-weight: SemiBold Italic;
-    font-size: 18px;
-    opacity: 1;
-    text-align: left;
-  }
-  .runningSalter{
-    width: 29px;
-    color: rgba(0,0,0,1);
-    position: absolute;
-    top: 83px;
-    left: 161px;
-    font-family: Poppins;
-    font-weight: ExtraBold Italic;
-    font-size: 24px;
-    opacity: 1;
-    text-align: left;
-  }
-  .lineTxt {
-    width: 64px;
-    color: rgba(98,84,93,1);
-    position: absolute;
-    top: 144px;
-    left: 36px;
-    font-family: Poppins;
-    font-weight: SemiBold Italic;
-    font-size: 18px;
-    opacity: 1;
-    text-align: left;
-  }
-  .currentlyServing {
-    width: 116px;
-    color: rgba(98,84,93,1);
-    position: absolute;
-    top: 144px;
-    left: 220px;
-    font-family: Poppins;
-    font-weight: SemiBold Italic;
-    font-size: 18px;
-    opacity: 1;
-    text-align: left;
-  }
-  .name {
-    color: #fff;
-  }
-  .name {
-    color: #fff;
-  }
-  
-  .inLineContainer {
-    width: 137px;
-    height: 330px;
-    background: rgba(236,199,191,1);
-    opacity: 1;
-    position: absolute;
-    top: 190px;
-    left: 24px;
-    border-top-left-radius: 21px;
-    border-top-right-radius: 21px;
-    border-bottom-left-radius: 21px;
-    border-bottom-right-radius: 21px;
-    overflow: hidden;
-  }
-  .currentServingContainer {
-    width: 137px;
-    height: 330px;
-    background: rgba(236,199,191,1);
-    opacity: 1;
-    position: absolute;
-    top: 190px;
-    left: 215px;
-    border-top-left-radius: 21px;
-    border-top-right-radius: 21px;
-    border-bottom-left-radius: 21px;
-    border-bottom-right-radius: 21px;
-    overflow: hidden;
-  }
-  .btnExitTxt{
-    color: white;
-  }
-  .btnNext {
-    width: 106px;
-    height: 30px;
-    background: rgba(59,47,59,1);
-    opacity: 1;
-    position: absolute;
-    top: 476px;
-    left: 231px;
-    color: rgba(255,255,255,1);
-    font-family: Poppins;
-    font-weight: SemiBold Italic;
-    font-size: 16px;
-    text-align: center;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    border-bottom-left-radius: 9px;
-    border-bottom-right-radius: 9px;
-    overflow: hidden;
-  }
-  .usersInLine {
-    width: 101px;
-    color: rgba(0,0,0,1);
-    position: absolute;
-    top: 212px;
-    left: 40px;
-    font-family: Poppins;
-    font-weight: Bold italic;
-    font-size: 28px;
-    opacity: 1;
-    text-align: left;
-    white-space: pre-wrap;
-  }
-  .servedUser {
-    width: 58px;
-    color: rgba(0,0,0,1);
-    position: absolute;
-    top: 212px;
-    left: 250px;
-    font-family: Poppins;
-    font-weight: Bold Italic;
-    font-size: 28px;
-    opacity: 1;
-    text-align: left;
-  }
-  .servingTimeTxt {
-    width: 237px;
-    color: rgba(255,255,255,1);
-    position: absolute;
-    top: 547px;
-    left: 35px;
-    font-family: Poppins;
-    font-weight: SemiBold Italic;
-    font-size: 13px;
-    opacity: 1;
-    text-align: left;
-  }
-  .allOdjelContainer {
-    width: 348px;
-    height: 266px;
-    background: rgba(59,47,59,1);
-    opacity: 1;
-    position: absolute;
-    top: 533px;
-    left: 14px;
-    border-top-left-radius: 34px;
-    border-top-right-radius: 34px;
-    border-bottom-left-radius: 34px;
-    border-bottom-right-radius: 34px;
-    overflow: hidden;
-  }
-  .listGridContainer {
-    top: 38px;
-    left: 15px;
-    overflow-y: scroll;
-    position: absolute;
-    width: 360px;
-    height: 240px;
-    
-  }
-  .listItemContainer {
-    list-style: none;
-    display: inline-block;
-  
-  }
-  .listagrid {
-    right: 30px;
-    columns: 3;
-    position: absolute;
-    width: 348px;
-  }
-  .listItemContainer2 {
-    list-style: none;
-    display: inline-block;
-    
-  }
+}

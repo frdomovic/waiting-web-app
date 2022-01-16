@@ -10,6 +10,7 @@ export default function NotificationPop(props) {
   const [activeradio, setActiveradio] = useState(true);
   const [notiftime, setNotiftime] = useState(0);
   const [owntime, setOwntime] = useState(0);
+  let ime = location.state.ime.split(" ");
 
   const handleNotification = async() => {
       if(!activeradio){
@@ -20,7 +21,8 @@ export default function NotificationPop(props) {
             salter: location.state.salter,
             vrijeme: location.state.vrijeme,
             clientId: location.state.clientId,
-            notifme: owntime
+            notifme: owntime,
+            ozn : ime[1]
           }});
       }else{
         history.push({
@@ -30,7 +32,8 @@ export default function NotificationPop(props) {
             salter: location.state.salter,
             vrijeme: location.state.vrijeme,
             clientId: location.state.clientId,
-            notifme: notiftime
+            notifme: notiftime,
+            ozn : ime[1]
           }});
       }
   };

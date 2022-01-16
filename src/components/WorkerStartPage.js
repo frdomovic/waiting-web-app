@@ -167,16 +167,3 @@ function WorkerStartPage(props) {
 }
 
 export default WorkerStartPage;
-
-/**
- *  if(inline.indexOf(i) !== 0){
-              if(i){
-                return (
-                  <li className={classes.listItemContainer2} key={i.klijentId}>{i.jedOzn}{i.klijentId}<br /></li>
-                );
-
-              }
-             
-            }
-            return;
- */

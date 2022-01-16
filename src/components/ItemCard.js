@@ -48,7 +48,8 @@ export default function ItemCard(props) {
           redniBroj: data.redniBroj,
           salter: data.salter,
           vrijeme: data.vrijemeCekanja / 60,
-          clientId: props.clientId
+          clientId: props.clientId,
+          ime: props.odjeltitle
         },
       });
     }

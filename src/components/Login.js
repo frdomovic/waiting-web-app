@@ -57,19 +57,18 @@ export default function Login(props) {
               setUserSession(tokenstr, username);
               props.history.push("/Signup");
             }else{
-                if(username === "admin@admin.redured.org"){
-                  setAdminSession(tokenstr, username, "admin");
-                  props.history.push("/admindash");
-                  console.log("ok admin");
-
-                }else{
                   setUserSession(tokenstr, username);
                   props.history.push("/WorkerStartPage");
                   console.log("ok");
                 }
                 
-            }
-          }    
+          }else if (stats === 202){
+            setLoading(false);
+            setAdminSession(tokenstr, username, "admin");
+            props.history.push("/admindash");
+            console.log("ok admin");
+
+          }
       })
       .catch((err) => {
         setLoading(false);

@@ -1,75 +1,75 @@
 .cardItem {
-    z-index: 1;
-    width: 145px;
-    height: 180px;
-    position: relative;
-    overflow: hidden;
-    background: rgba(236,199,191,1);
-    box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 30px;
-    transition: 500ms;
-    margin-bottom: 10px;
-  }
-  .odjelIcon {
-    width: 60px;
-    height: 60px;
-    opacity: 1;
-    background: rgba(236,199,191,1);
-    position: absolute;
-    top: 14px;
-    left: 42px;
-    border-radius: 50%;
-  }
-  .odjelTitle {
-    width: 66px;
-    color: rgba(59,47,59,1);
-    position: absolute;
-    top: 85px;
-    left: 39px;
-    font-family: Poppins;
-    font-weight: SemiBold Italic;
-    font-size: 18px;
-    opacity: 1;
-    text-align: left;
-  }
-  .odjelDesc {
-    width: 86px;
-    color: rgba(59,47,59,1);
-    position: absolute;
-    top: 112px;
-    left: 13px;
-    font-family: Poppins;
-    font-weight: Medium Italic;
-    font-size: 13px;
-    opacity: 1;
-    text-align: center;
-  }
-  .btnUred {
-    width: 97px;
-    height: 23px;
-    background: rgba(59,47,59,1);
-    opacity: 1;
-    position: absolute;
-    top: 140px;
-    left: 24px;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
-    border-bottom-left-radius: 9px;
-    border-bottom-right-radius: 9px;
-    overflow: hidden;
-    color: rgba(255,255,255,1);
-    font-family: Poppins;
-    font-weight: SemiBold Italic;
-    font-size: 11px;
-    text-align: center;
-    border: transparent;
-    z-index: 1;
-  
-  }
-  .btnUred:hover{
-    background: rgba(254,234,230,1);
-    border: 2px solid;
-    font-size: 11px;
-    border-color: rgba(59,47,59,1);
-    color: rgba(59,47,59,1);
-  }
+  z-index: 1;
+  width: 145px;
+  height: 180px;
+  position: relative;
+  overflow: hidden;
+  background: rgba(236,199,191,1);
+  box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  transition: 500ms;
+  margin-bottom: 10px;
+}
+.odjelIcon {
+  width: 60px;
+  height: 60px;
+  opacity: 1;
+  background: rgba(236,199,191,1);
+  position: absolute;
+  top: 14px;
+  left: 42px;
+  border-radius: 50%;
+}
+.odjelTitle {
+  width: 66px;
+  color: rgba(59,47,59,1);
+  position: absolute;
+  top: 85px;
+  left: 39px;
+  font-family: Poppins;
+  font-weight: SemiBold Italic;
+  font-size: 18px;
+  opacity: 1;
+  text-align: left;
+}
+.odjelDesc {
+  width: 86px;
+  color: rgba(59,47,59,1);
+  position: absolute;
+  top: 112px;
+  left: 13px;
+  font-family: Poppins;
+  font-weight: Medium Italic;
+  font-size: 13px;
+  opacity: 1;
+  text-align: center;
+}
+.btnUred {
+  width: 97px;
+  height: 23px;
+  background: rgba(59,47,59,1);
+  opacity: 1;
+  position: absolute;
+  top: 140px;
+  left: 24px;
+  border-top-left-radius: 9px;
+  border-top-right-radius: 9px;
+  border-bottom-left-radius: 9px;
+  border-bottom-right-radius: 9px;
+  overflow: hidden;
+  color: rgba(255,255,255,1);
+  font-family: Poppins;
+  font-weight: SemiBold Italic;
+  font-size: 11px;
+  text-align: center;
+  border: transparent;
+  z-index: 1;
+
+}
+.btnUred:hover{
+  background: rgba(254,234,230,1);
+  border: 2px solid;
+  font-size: 11px;
+  border-color: rgba(59,47,59,1);
+  color: rgba(59,47,59,1);
+}
